@@ -1,0 +1,51 @@
+{
+  "name": "assetfraction-contracts",
+  "version": "1.0.0",
+  "description": "Smart contracts for AssetFraction - Blockchain-powered fractional ownership platform",
+  "main": "index.js",
+  "scripts": {
+    "build": "forge build",
+    "test": "forge test",
+    "test:verbose": "forge test -vvv",
+    "test:gas": "forge test --gas-report",
+    "coverage": "forge coverage",
+    "clean": "forge clean",
+    "fmt": "forge fmt",
+    "lint": "solhint 'src/**/*.sol' 'test/**/*.sol' 'script/**/*.sol'",
+    "deploy:local": "forge script script/Deploy.s.sol:DeployLocal --rpc-url http://localhost:8545 --broadcast --private-key $PRIVATE_KEY",
+    "deploy:testnet": "forge script script/Deploy.s.sol:DeployTestnet --rpc-url $HEDERA_TESTNET_RPC --broadcast --private-key $PRIVATE_KEY --verify",
+    "deploy:mainnet": "forge script script/Deploy.s.sol:Deploy --rpc-url $HEDERA_MAINNET_RPC --broadcast --private-key $PRIVATE_KEY --verify",
+    "verify": "forge verify-contract",
+    "install": "forge install",
+    "update": "forge update",
+    "snapshot": "forge snapshot",
+    "anvil": "anvil",
+    "setup": "npm run install && npm run build"
+  },
+  "keywords": [
+    "solidity",
+    "smart-contracts",
+    "defi",
+    "real-estate",
+    "fractional-ownership",
+    "hedera",
+    "blockchain",
+    "tokenization"
+  ],
+  "author": "AssetFraction Team",
+  "license": "MIT",
+  "devDependencies": {
+    "solhint": "^4.0.0",
+    "prettier": "^3.0.0",
+    "prettier-plugin-solidity": "^1.1.3"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Peculiar-ops/assetfaction.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Peculiar-ops/assetfaction/issues"
+  },
+  "homepage": "https://github.com/Peculiar-ops/assetfaction#readme"
+}
